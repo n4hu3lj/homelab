@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9e8d6a8c-2651-4bb3-9625-438a663fe3e1" width="600" alt="welcome"></p>
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/welcome.png?raw=true" width="600" alt="welcome"></p>
 
 Hi! I'm Nahuel, a tech enthusiast on the path to become SysAdmin. 
 My first contact with the field was when I was 8 years old and I hosted my first dedicated servers, I also became interested in hardware since a young age.
@@ -54,15 +54,16 @@ I'm on an ultralearning journey to acquire the skills and knowledge needed to pu
 
 et Voila!
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/feeff055-dd9f-4895-8e04-258da28a4016" width="510" alt="1">
-  <img src="https://github.com/user-attachments/assets/ca6f5a0e-6ad6-48e6-a4ee-2db9d09b16e9" width="500" alt="2">
-</p>
-<p align="left">
-  <img src="https://github.com/user-attachments/assets/02e12ea4-b680-4d30-ae5f-6ffccc0c1ea2" width="500" alt="3">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/1.JPG?raw=true" width="510" alt="1">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/2.JPG?raw=true" width="500" alt="2">
 </p>
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/cb9f037d-aeb8-4b6d-9296-7775057e60fc" width="500" alt="4">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/3.JPG?raw=true" width="500" alt="3">
+</p>
+
+<p align="left">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/4.JPG?raw=true" width="500" alt="4">
 </p>
 
 - 🔹**Apache**
@@ -70,7 +71,7 @@ et Voila!
 2. Configure the .html.
 3. Change the port to avoid conflicts with the other services.
 <p align="left">
- <img width="790" height="654" alt="5" src="https://github.com/user-attachments/assets/b198d789-6385-419f-af7f-5f8d45d40359" />
+ <img width="790" height="654" alt="5" src="https://github.com/n4hu3lj/homelab/blob/main/img/5.png?raw=true" />
 </p>
 
 >_it's the first version of my retro page that I later migrated to golang._
@@ -79,11 +80,11 @@ et Voila!
   - I have another docker compose file that runs the following services together: Nginx, Postgres, Adminer and Portainer.
     - <ins>Portainer: to manage and see the logs on the different services.</ins>
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/582d490b-7891-4a1e-ae4d-771c36a7cb02" width="800" alt="11">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/11.JPG?raw=true" width="800" alt="11">
 </p>
 <ins>Adminer-PostgreSQL: I plan in the future to get started with databases so, I have it installed already.</ins>
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/7870bfda-dc68-454f-9fec-51bd15307a4d" width="800" alt="12">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/12.JPG?raw=true" width="800" alt="12">
 </p>
 
 - 🔹**Automation scripts**
@@ -116,7 +117,7 @@ icacls id_ed25519 /grant:r "$($env:USERNAME):(R)"`
 5. I connect again to the server to check everything is alright and then with `sudo nano /etc/ssh/ssh_config` . I uncomment `#PasswordAuthentication` and set it to `no`. Restart ssh with `systemctl restart ssh`.
 After executing `ssh -v` we see that it connects with the public key.
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/f4287904-9318-4702-84cd-ec7909ff4dbc" width="800" alt="13">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/13.JPG?raw=true" width="800" alt="13">
 </p>
 
 - Other security measures implemented: Firewall UFW, maintaining all in the LAN with NAT, non-root user accounts with sudo, system updates, and backups.
@@ -144,11 +145,11 @@ After executing `ssh -v` we see that it connects with the public key.
 **🗃️ <ins>Active Directory Structure**</ins>
 - To emulate an enterprise environment, I created three OUs to represent different floors of a corporate HQ, each containing users, groups and different settings. Below a diagram I did in Packet Tracer to show the setup.
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/f3e9775c-a25c-490e-b622-e9c9f0c56a2d" width="500" alt="6">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/6.JPG?raw=true" width="500" alt="6">
 </p>
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/11572da7-4563-45b0-a63f-ae428d862771" width="500" alt="7">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/7.JPG?raw=true" width="500" alt="7">
 </p>
 
 **📝 <ins>GPOs**</ins>
@@ -159,13 +160,13 @@ After executing `ssh -v` we see that it connects with the public key.
   - Regedit disabled.
 - For OU 3, there are more permissions as it is supposed to be the administration floor.
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/48af4557-761c-4fec-8292-316de355a747" width="800" alt="8">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/8.JPG?raw=true" width="800" alt="8">
 </p>
 
 >_After gpupdate /force, remote connecting to one of the users of Floor 1 group:_
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/271cd781-4b42-4696-90aa-61290858384a" width="800" alt="9">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/9.JPG?raw=true" width="800" alt="9">
 </p>
 
 **📌 <ins>Key points</ins>**
@@ -187,7 +188,7 @@ To not mess with my network settings in my main lab, the first thing I did was t
 Then, I installed the ISO of Alpine (virtual version) and I did the same in the network settings, I added "Host-Only". 
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/1b60c9b3-b642-4692-82a6-7aa16ce77ab2" width="1000" alt="14">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/14.png?raw=true" width="1000" alt="14">
 </p>
 
 2. **Network configuration inside the VMs**
@@ -205,14 +206,14 @@ For this:
 
 I ping both machines, both pongs are right. But Alpine is very minimalist and it doesn't have ssh installed.
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/8cbf8f08-b9d7-4e32-be55-f543bcc40565" width="1000" alt="15">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/15.png?raw=true" width="1000" alt="15">
 </p>
 
 I do  `apk add openssh` `rc-update add sshd` `service sshd start`
 
 Now ssh works, but I couldn't get in with root, so I added an user with:  `adduser user` `addgroup user wheel` `passwd user` and I got in.
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/645543cc-d0d1-4ea1-8adc-08510e76ab04" width="700" alt="16">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/16.png?raw=true" width="700" alt="16">
 </p>
 
 4. **Preparing Ansible**
@@ -234,7 +235,7 @@ After, I use  `ansible --version` to see it's correctly installed and I execute:
 > _Here, I had a lot of errors because Alpine doesn't have phyton3 packages installed, and I have to get the official repositories of Alpine. I want this machine to use as little space as possible, so I'll just keep it simple for now and after when I install another ISO I'll add more settings and tools._
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/6336702b-d1bb-4ef3-aca6-86a51934c07f" width="1000" alt="17">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/17.png?raw=true" width="1000" alt="17">
 </p>
 
 > _At the end it works and the command is executed in the second VM._
@@ -279,13 +280,13 @@ Inside windows exporter folder, I executed in powershell the following command: 
 - **Config of Prometheus and Grafana to work together**
 I do `docker compose up -d` and I verify Prometheus is serving metrics in `localhost:9090/metrics`.
 Then I go to Grafana web interface with `localhost:3000` and in Connections I added Prometheus server url. 
-<img width="2542" height="1218" alt="19" src="https://github.com/user-attachments/assets/3dfe27ae-7c18-4e8d-8d0b-fb0b08e84862" />
+<img width="2542" height="1218" alt="19" src="https://github.com/n4hu3lj/homelab/blob/main/img/19.png?raw=true" />
 
 > _In my case, it worked with http://prometheus:9090._
 
 - At last, I import a dashboard with an ID, I select prometheus data source and:
 
-<img width="2560" height="1280" alt="20" src="https://github.com/user-attachments/assets/09d0ecbf-0af7-4858-b398-681d0cb7c8b3" />
+<img width="2560" height="1280" alt="20" src="https://github.com/n4hu3lj/homelab/blob/main/img/20.png?raw=true" />
 
 _It works!_
 
@@ -303,7 +304,8 @@ _It works!_
 This project shows my current backup setup of my main lab. My plan is to start simple and gradually increase complexity, integrating more advanced backup tools, cloud storage, or an additional home storage server.  
 - **Backup with Shell script**
 
-I use a shell script to backup specific directories of my system. [añadir]
+I use a shell script to backup specific directories of my system. [scripts/backup.sh](scripts/backup.sh)
+
 After I added it to cron using `sudo crontab -e` (with sudo to make sure it executes all properly) 
 
 `0 11 * * 1 /home/user/scriptbackup/backup.sh >> /home/user/scriptbackup/backup.log 2>&1`
@@ -315,12 +317,12 @@ Since Windows doesn't natively support `rsync` and it doesn't have openSSH insta
   2. Allow SSH connections by opening the necessary port (usually 22, 2222).
   4. Install OpenSSH Server and Client.
   5. Install `rsync` on Windows.
-<img width="2560" height="906" alt="21" src="https://github.com/user-attachments/assets/36608991-69e1-4b9d-81d6-61c13fdfcbe9" />
+<img width="2560" height="906" alt="21" src="https://github.com/n4hu3lj/homelab/blob/main/img/21.png?raw=true" />
 
 Once the environment was ready, I run `rsync` from the lab to send the backup file to my Desktop.
 `rsync -azv -e ssh /backups/server-Friday.tgz user@192.168.x.x:/c/Users/<USERNAME>/Desktop/`
 
-<img width="723" height="454" alt="22" src="https://github.com/user-attachments/assets/af27921f-ef30-4d85-810a-f94bbe4f4aea" />
+<img width="723" height="454" alt="22" src="https://github.com/n4hu3lj/homelab/blob/main/img/22.png?raw=true" />
 
 **📌 <ins>Key points</ins>**
 - Current setup backs up weekly or after an important change in the system.
@@ -337,12 +339,12 @@ Once the environment was ready, I run `rsync` from the lab to send the backup fi
  It started as a simple html I made to test Apache on my server. Then I came up with a fun idea that could also help me practice and take my first steps with a programming language. I decided to make a retro website using GO, which contains memories from my childhood on the internet.
 [main.go](main.go)
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/f901f656-1732-4b85-829c-687d03c4b8ea" width="1000" alt="10">
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/10.png?raw=true" width="1000" alt="10">
 </p>
 
 This is how my workstation for the website looks now:
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/29437bde-c336-4eae-85d1-e7ff07e1e87b" width="1000" alt="18">  
+  <img src="https://github.com/n4hu3lj/homelab/blob/main/img/18.png?raw=true" width="1000" alt="18">  
 </p>
 
 
