@@ -1,0 +1,64 @@
+volumes:
+  etc_wireguard:
+
+services:
+  wg-easy:
+    image: ghcr.io/wg-easy/wg-easy:15
+    container_name: wg-easy
+    environment:
+    # optional:
+    #  - PORT=51821
+    # - HOST= ip
+      - INSECURE=true   # ATT: ALLOWED TO LOG IN WITH HTTP !!
+    networks:
+      homelab:
+        ipv4_address: #<---- ip
+        ipv6_address: #<---- ip
+    volumes:
+      - etc_wireguard:/etc/wireguard
+      - /lib/modules:/lib/modules:ro
+    ports:
+      - "51820:51820/udp"
+      - "51821:51821/tcp"
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.ip_forward=1
+      - net.ipv4.conf.all.src_valid_mark=1
+      - net.ipv6.conf.all.disable_ipv6=0
+      - net.ipv6.conf.all.forwarding=1
+      - net.ipv6.conf.default.forwarding=1
+
+  pihole:
+    image: pihole/pihole:latest
+    container_name: pihole
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80/tcp"
+      - "443:443/tcp"
+    environment:
+      TZ: 'Europe/Country' #<---- tz
+      FTLCONF_webserver_api_password: 'example' #<---- password of the web api
+      FTLCONF_dns_listeningMode: 'all'
+    volumes:
+          - ./etc-pihole:/etc/pihole
+    cap_add:
+      - NET_ADMIN
+      - SYS_TIME
+      - SYS_NICE
+    restart: unless-stopped
+    networks:
+      homelab:
+        ipv4_address: #<-------Ip here
+
+networks:
+  homelab:
+    driver: bridge
+    enable_ipv6: true
+    ipam:
+      config:
+        - subnet: #<------IPv4 here
+        - subnet: #<------IPv6 here
