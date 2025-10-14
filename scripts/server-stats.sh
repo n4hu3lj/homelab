@@ -28,6 +28,7 @@ uname -a
 echo ""
 
 echo "---- || Logged users in the server || ----"
+who
 echo ""
 
 echo "---- || You are || ----"
