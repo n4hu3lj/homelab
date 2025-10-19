@@ -1,12 +1,8 @@
 <p align="center">
   <img src="https://github.com/n4hu3lj/homelab/blob/main/img/welcome.png?raw=true" width="600" alt="welcome"></p>
 
-Hi! I'm Nahuel, a tech enthusiast on the path to become SysAdmin. 
-My first contact with the field was when I was 8 years old and I hosted my first dedicated servers, I also became interested in hardware since a young age.
-After a brief pause and exploring different career paths (and feeling a bit lost) I've now decided to fully dive into IT, creating this project to learn, experiment and rediscover my old passion. 
-
-# My intensive learning journey to become SysAdmin
-I'm on an ultralearning journey to acquire the skills and knowledge needed to pursue a junior sysadmin position. I dedicate 6-8 hours of study/work, 7 days a week and my final goal, with work and dedication, is to earn certifications, build a portfolio with lab projects and gain the knowledge and experience necessary to launch my career in IT. The main focus of this journey is to learn:
+# My HomeLab for SysAdmin and DevOps training
+The main technologies used in this homelab are:
 - 📺 Virtualization
 - 📟 Servers
 - 🌐 Networking
@@ -26,9 +22,6 @@ I'm on an ultralearning journey to acquire the skills and knowledge needed to pu
 
 
 ## 📁Projects:
-**I used the projects as a way of learning by doing, to track my strengths and identify areas for improvement.**
-
----
 
 ### <p align="center"> <ins> Ubuntu Server: my main lab</ins></p>
 **🧠 <ins>Goals**</ins>
